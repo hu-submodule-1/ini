@@ -274,7 +274,7 @@ bool set_ini_int(const char *file_name, const char *section, const char *key, co
 {
     char set_data[VALUE_MAX_LEN] = {0};
 
-    if ((!file_name) || (!section) || (!key) || (!value))
+    if ((!file_name) || (!section) || (!key))
     {
         return false;
     }

@@ -258,7 +258,9 @@ bool set_ini_str(const char *file_name, const char *section, const char *key, co
     snprintf(read_line_data, sizeof(read_line_data), "%s.tmp", file_name);
 
     // 将临时文件更新到原文件
-    return rename(read_line_data, file_name);
+    rename(read_line_data, file_name);
+
+    return true;
 }
 
 /**
